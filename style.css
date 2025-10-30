@@ -32,11 +32,9 @@ header {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    list-style-type: none;
 }
 
 nav a {
-    text-decoration: none;
     color: #2B2C34;
     font-weight: 700;
     font-size: 20px;
@@ -57,7 +55,6 @@ header .search::before {
     height: 13.25px;
     background-image: url('data:image/svg+xml;utf8,<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.08329 12.7501C8.34057 12.7498 9.56161 12.3289 10.552 11.5544L13.6658 14.6682L14.6674 13.6667L11.5536 10.5528C12.3285 9.56234 12.7497 8.34102 12.75 7.08341C12.75 3.95896 10.2077 1.41675 7.08329 1.41675C3.95883 1.41675 1.41663 3.95896 1.41663 7.08341C1.41663 10.2079 3.95883 12.7501 7.08329 12.7501ZM7.08329 2.83341C9.42717 2.83341 11.3333 4.73954 11.3333 7.08341C11.3333 9.42729 9.42717 11.3334 7.08329 11.3334C4.73942 11.3334 2.83329 9.42729 2.83329 7.08341C2.83329 4.73954 4.73942 2.83341 7.08329 2.83341Z" fill="%232B2C34"/></svg>');
     background-size: cover;
-
     margin-bottom: 2px;
 }
 
@@ -114,10 +111,13 @@ header .active-link a {
 }
 
 .hero-wrapper > div p {
-    width: 652px;
+    padding-left: 12px;
+    width: 667px;
     font-weight: 400;
     font-size: 20px;
     margin: 30px 0 30px 0;
+    border-left: 3px solid #2B2C34;
+    color: #9A9494;
 }
 
 .hero-wrapper form {
@@ -214,9 +214,20 @@ header .active-link a {
     align-items: flex-start;
     flex-direction: column;
     padding-left: 40px;
-    gap: 25px;
+    gap: 36px;
     box-shadow: 4px 6px 13px 0 rgba(215, 215, 215, 0.25);
     transition: 1.5s;
+}
+
+.category-wrapper .cards .card a {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 36px;
+
 }
 
 .category-wrapper .cards .card:hover {
@@ -226,19 +237,15 @@ header .active-link a {
     transition: 2s;
 }
 
-.category-wrapper .cards .card > div {
+.category-wrapper .cards .card > a > div {
     border-radius: 7px;
     width: 60px;
     height: 60px;
     background-color: #FFFFFE;
-    position: relative;
-}
-
-.category-wrapper .cards .card > div svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: -30px;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
 }
 
 .category-wrapper .cards .card p {
@@ -315,7 +322,9 @@ header .active-link a {
     gap: 16px;
 }
 
-.group-of-articles .items .item {
+.group-of-articles .items .item a {
+    width: 100%;
+    height: 100%;
     padding: 25px 18px;
     transition: 0.2s;
     display: flex;
@@ -344,7 +353,6 @@ header .active-link a {
     justify-content: flex-start;
     align-items: center;
     gap: 15px;
-    /*margin-bottom: 20px;*/
 }
 
 .items .item .footer h3 {
